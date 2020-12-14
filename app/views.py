@@ -21,3 +21,12 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+
+@app.route('/', methods=['POST'])
+def upload_file():
+    uploaded_file = request.files['file']
+    if uploaded_file.filename != '':
+        uploaded_file.save(os.path.join('uploads/' + uploaded_file.filename))
+
+    return redirect(f'/process/{uploaded_file.filename}')
