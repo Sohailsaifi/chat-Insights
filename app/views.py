@@ -30,3 +30,9 @@ def upload_file():
         uploaded_file.save(os.path.join('uploads/' + uploaded_file.filename))
 
     return redirect(f'/process/{uploaded_file.filename}')
+
+@app.route('/process/<file_name>')
+def processing_phase(file_name):
+    if file_name=='':
+        abort(404)
+    try:
