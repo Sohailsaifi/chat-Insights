@@ -36,3 +36,6 @@ def processing_phase(file_name):
     if file_name=='':
         abort(404)
     try:
+        chats = ExtractDataFrame(os.path.join('uploads/' + file_name))
+        chats.process()
+        df = chats.dataframe()  # The Final Processed DataFrame 
