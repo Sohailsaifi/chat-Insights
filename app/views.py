@@ -39,3 +39,15 @@ def processing_phase(file_name):
         chats = ExtractDataFrame(os.path.join('uploads/' + file_name))
         chats.process()
         df = chats.dataframe()  # The Final Processed DataFrame 
+
+        os.remove(os.path.join('uploads/' + file_name))
+        stats = GenerateStats()
+
+        media_ratio = round(stats.mediaRatio(df),2)  # Media Ratio
+
+        total_emojis = stats.totalEmojis(df)  # Total Emojis
+
+        unique_emojis = stats.uniqueEmojis(df)  # Total Unique Emojis
+
+        frequent_emojis = stats.frequentEmojis(df)
+        emoji_donut = Emojis_donut(frequent_emojis ,'Emoji Distribution')  # Emojis Donut Plot
