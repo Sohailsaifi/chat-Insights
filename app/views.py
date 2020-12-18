@@ -51,3 +51,6 @@ def processing_phase(file_name):
 
         frequent_emojis = stats.frequentEmojis(df)
         emoji_donut = Emojis_donut(frequent_emojis ,'Emoji Distribution')  # Emojis Donut Plot
+
+        active_members = stats.activeMembers(df)
+        activeMemberPlot = membersBarPlot(active_members, 'Active Members of The Group')  # Active Members Bar Chart
