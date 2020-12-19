@@ -54,3 +54,7 @@ def processing_phase(file_name):
 
         active_members = stats.activeMembers(df)
         activeMemberPlot = membersBarPlot(active_members, 'Active Members of The Group')  # Active Members Bar Chart
+
+        lazy_members = stats.lazyMembers(df)
+        lazyMemberPlot = membersBarPlot(lazy_members, 'Lazy Members of The Group')  # Lazy Members Bar Chart
+        
