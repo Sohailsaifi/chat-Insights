@@ -57,4 +57,6 @@ def processing_phase(file_name):
 
         lazy_members = stats.lazyMembers(df)
         lazyMemberPlot = membersBarPlot(lazy_members, 'Lazy Members of The Group')  # Lazy Members Bar Chart
-        
+
+        result_dates = stats.activityOverDates(df)
+        datesActivityGraph = activityDate_Graph(result_dates)  # Overall Dates Activity Line Plot
