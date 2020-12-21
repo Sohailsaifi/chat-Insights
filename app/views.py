@@ -60,3 +60,7 @@ def processing_phase(file_name):
 
         result_dates = stats.activityOverDates(df)
         datesActivityGraph = activityDate_Graph(result_dates)  # Overall Dates Activity Line Plot
+
+        result_time = stats.activityOverTime(df)
+        timeActivityGraph = activityTime_Graph(result_time)  # Overall Day Activity Line Plot
+
