@@ -66,4 +66,6 @@ def processing_phase(file_name):
 
         morn_night = stats.nightOwls_earlyBirds(df)
         morning = morn_night['morning']
+        morning_plot = night_morningPlot(morning, 'Early Birds (6 am to 9 am)')  # Morning Authors Pie Chart
+        
 
