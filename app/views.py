@@ -64,3 +64,6 @@ def processing_phase(file_name):
         result_time = stats.activityOverTime(df)
         timeActivityGraph = activityTime_Graph(result_time)  # Overall Day Activity Line Plot
 
+        morn_night = stats.nightOwls_earlyBirds(df)
+        morning = morn_night['morning']
+
