@@ -70,3 +70,6 @@ def processing_phase(file_name):
         night = morn_night['night']
         night_plot = night_morningPlot(night, 'Night Owls (11 pm to 3 am)')  # Night Authors Pie Chart
 
+        con_less = stats.emojiCon_Emojiless(df)
+        emoji_con = con_less['Emoji_con']
+
