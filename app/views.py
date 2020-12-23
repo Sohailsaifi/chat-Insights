@@ -72,4 +72,6 @@ def processing_phase(file_name):
 
         con_less = stats.emojiCon_Emojiless(df)
         emoji_con = con_less['Emoji_con']
+        emojiAdictsPlot = emojiAdicts_LessPlot(emoji_con, 'Emoji Addicts')  # Emoji Addict Bar Chart
+
 
