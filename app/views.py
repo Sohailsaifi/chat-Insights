@@ -77,3 +77,6 @@ def processing_phase(file_name):
         holidays = stats.holidays_dict
         returned = stats.holidaysDataFrame(df)
 
+        holiday_authors = {}
+        holiday_freq_emojis = {}
+
