@@ -84,5 +84,6 @@ def processing_phase(file_name):
         for i in holidays.values():
             if not returned[i].empty:
                 holiday_authors['eventGraphAuthor'+str(j)] = membersBarPlot(stats.activeMembers(returned[i]), i)  
+                holiday_freq_emojis['eventGraphEmoji'+str(j)] = Emojis_donut(stats.frequentEmojis(returned[i]),i)
                 j += 1
         
