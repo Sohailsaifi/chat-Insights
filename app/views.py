@@ -80,3 +80,9 @@ def processing_phase(file_name):
         holiday_authors = {}
         holiday_freq_emojis = {}
 
+        j = 1
+        for i in holidays.values():
+            if not returned[i].empty:
+                holiday_authors['eventGraphAuthor'+str(j)] = membersBarPlot(stats.activeMembers(returned[i]), i)  
+                j += 1
+        
