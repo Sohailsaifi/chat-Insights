@@ -87,3 +87,5 @@ def processing_phase(file_name):
                 holiday_freq_emojis['eventGraphEmoji'+str(j)] = Emojis_donut(stats.frequentEmojis(returned[i]),i)
                 j += 1
         
+    except:
+        abort(404)
