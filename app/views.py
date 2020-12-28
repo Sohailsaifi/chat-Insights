@@ -89,3 +89,12 @@ def processing_phase(file_name):
         
     except:
         abort(404)
+
+return render_template('analysis.html', total_emojis=total_emojis, total=df.shape[0],
+                        media_ratio=media_ratio, unique_emojis=unique_emojis,
+                        activeMemberPlot=activeMemberPlot, lazyMemberPlot=lazyMemberPlot,
+                        bar_plot_dates=datesActivityGraph, bar_plot_time=timeActivityGraph,
+                        morning_plot=morning_plot, night_plot=night_plot,
+                        emojiAdictsPlot=emojiAdictsPlot, holiday_authors=holiday_authors, 
+                        holiday_freq_emojis=holiday_freq_emojis, emoji_donut=emoji_donut
+                        )
