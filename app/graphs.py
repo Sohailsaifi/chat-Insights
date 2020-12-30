@@ -26,4 +26,14 @@ def activityDate_Graph(df):
 
 def activityTime_Graph(df):
     y = df['Number of Messages'].values
+    fig_batch = {
+                    'data': [
+                        go.Scatter(
+                            x=df.index,
+                            y=df['Number of Messages'].values,
+                            # text=y,
+                            # textposition='auto',
+                            mode='lines',
+                        )],
+}
     
