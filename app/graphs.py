@@ -33,5 +33,11 @@ def activityTime_Graph(df):
                             y=df['Number of Messages'].values,
                             mode='lines',
                         )],
-}
+
+                    'layout': go.Layout(
+                        xaxis={'title': 'Time'},
+                        yaxis={'title': 'Number of Messages'},
+                        hovermode='closest',
+                        title='Activity Over Whole Day'
+                    )}
     
