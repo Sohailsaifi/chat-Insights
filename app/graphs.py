@@ -20,3 +20,5 @@ def activityDate_Graph(df):
                         hovermode='closest',
                         title='Overall Activity of The Group'
                     )}
+    graphJSON = json.dumps(fig_batch, cls=plotly.utils.PlotlyJSONEncoder)
+    return graphJSON
