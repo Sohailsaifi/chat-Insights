@@ -14,4 +14,9 @@ def activityDate_Graph(df):
                             mode='lines'
                         )],
 
-                   }
+                    'layout': go.Layout(
+                        xaxis={'title': 'Dates'},
+                        yaxis={'title': 'Number of Messages'},
+                        hovermode='closest',
+                        title='Overall Activity of The Group'
+                    )}
