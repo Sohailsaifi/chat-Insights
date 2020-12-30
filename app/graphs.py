@@ -22,3 +22,8 @@ def activityDate_Graph(df):
                     )}
     graphJSON = json.dumps(fig_batch, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
+
+
+def activityTime_Graph(df):
+    y = df['Number of Messages'].values
+    
