@@ -40,4 +40,6 @@ def activityTime_Graph(df):
                         hovermode='closest',
                         title='Activity Over Whole Day'
                     )}
+    graphJSON = json.dumps(fig_batch, cls=plotly.utils.PlotlyJSONEncoder)
+    
     
