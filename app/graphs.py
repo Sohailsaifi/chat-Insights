@@ -50,3 +50,6 @@ def Emojis_donut(df, title):
                     go.Pie(labels=labels, values=values, hole=.5, textinfo='label+percent',
                              insidetextorientation='radial', title=title)
                     ])
+
+    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+    return graphJSON
