@@ -45,4 +45,5 @@ def activityTime_Graph(df):
     
 def Emojis_donut(df, title):
     labels = df.Emoji.values
+    values = df.Count.values
     
