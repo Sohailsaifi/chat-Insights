@@ -43,3 +43,6 @@ def activityTime_Graph(df):
     graphJSON = json.dumps(fig_batch, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
     
+def Emojis_donut(df, title):
+    labels = df.Emoji.values
+    
