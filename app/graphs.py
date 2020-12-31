@@ -46,4 +46,7 @@ def activityTime_Graph(df):
 def Emojis_donut(df, title):
     labels = df.Emoji.values
     values = df.Count.values
-    
+    fig = go.Figure(data=[
+                    go.Pie(labels=labels, values=values, hole=.5, textinfo='label+percent',
+                             insidetextorientation='radial', title=title)
+                    ])
