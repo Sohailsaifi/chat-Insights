@@ -59,4 +59,5 @@ def membersBarPlot(df, title):
                 labels={'y':'Number of Messages'}, text=df['Message Count'].values, title=title,
              )
     fig.update_layout(xaxis_tickangle=-30)
-   
+    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+    return graphJSON
