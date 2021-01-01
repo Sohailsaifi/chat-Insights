@@ -58,3 +58,5 @@ def membersBarPlot(df, title):
     fig = px.bar(df, x=df.index, y=df['Message Count'].values, 
                 labels={'y':'Number of Messages'}, text=df['Message Count'].values, title=title,
              )
+    fig.update_layout(xaxis_tickangle=-30)
+   
