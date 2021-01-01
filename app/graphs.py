@@ -53,3 +53,5 @@ def Emojis_donut(df, title):
 
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
+
+def membersBarPlot(df, title):
