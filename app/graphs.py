@@ -55,3 +55,6 @@ def Emojis_donut(df, title):
     return graphJSON
 
 def membersBarPlot(df, title):
+    fig = px.bar(df, x=df.index, y=df['Message Count'].values, 
+                labels={'y':'Number of Messages'}, text=df['Message Count'].values, title=title,
+             )
