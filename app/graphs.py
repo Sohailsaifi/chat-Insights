@@ -61,3 +61,5 @@ def membersBarPlot(df, title):
     fig.update_layout(xaxis_tickangle=-30)
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
+
+def night_morningPlot(df, title):
