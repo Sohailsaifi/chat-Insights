@@ -65,3 +65,7 @@ def membersBarPlot(df, title):
 def night_morningPlot(df, title):
     labels = df.index
     values = df['Message Count'].values
+    fig = go.Figure(data=[
+                    go.Pie(labels=labels, values=values, textinfo='label+percent',
+                             insidetextorientation='radial')
+                    ])
