@@ -64,3 +64,4 @@ def membersBarPlot(df, title):
 
 def night_morningPlot(df, title):
     labels = df.index
+    values = df['Message Count'].values
