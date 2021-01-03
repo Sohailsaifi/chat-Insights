@@ -69,3 +69,6 @@ def night_morningPlot(df, title):
                     go.Pie(labels=labels, values=values, textinfo='label+percent',
                              insidetextorientation='radial')
                     ])
+    fig.update_layout(title=title)
+    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+    return graphJSON
