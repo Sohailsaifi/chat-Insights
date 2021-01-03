@@ -63,3 +63,4 @@ def membersBarPlot(df, title):
     return graphJSON
 
 def night_morningPlot(df, title):
+    labels = df.index
