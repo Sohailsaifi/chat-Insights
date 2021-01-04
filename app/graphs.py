@@ -72,3 +72,5 @@ def night_morningPlot(df, title):
     fig.update_layout(title=title)
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
+
+def emojiAdicts_LessPlot(df, title):
