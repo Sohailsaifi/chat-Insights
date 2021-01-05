@@ -74,3 +74,6 @@ def night_morningPlot(df, title):
     return graphJSON
 
 def emojiAdicts_LessPlot(df, title):
+    fig = px.bar(df, x=df.index, y=df['Number of Emojis'].values, 
+                labels={'y':'Number of Emojis'}, text=df['Number of Emojis'].values, title=title,
+             )
