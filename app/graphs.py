@@ -77,3 +77,4 @@ def emojiAdicts_LessPlot(df, title):
     fig = px.bar(df, x=df.index, y=df['Number of Emojis'].values, 
                 labels={'y':'Number of Emojis'}, text=df['Number of Emojis'].values, title=title,
              )
+    fig.update_layout(xaxis_tickangle=-30)
