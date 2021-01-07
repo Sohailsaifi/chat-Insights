@@ -78,3 +78,5 @@ def emojiAdicts_LessPlot(df, title):
                 labels={'y':'Number of Emojis'}, text=df['Number of Emojis'].values, title=title,
              )
     fig.update_layout(xaxis_tickangle=-30)
+    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+    return graphJSON
