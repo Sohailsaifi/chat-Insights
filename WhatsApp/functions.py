@@ -3,3 +3,5 @@ import pandas as pd
 import emoji
 from collections import Counter
 import datetime
+
+class ExtractDataFrame:
