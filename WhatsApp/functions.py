@@ -14,3 +14,4 @@ class ExtractDataFrame:
         return file
 
     def is_newEntry(self, line: str) -> bool:
+        date_time = '([0-9]+)(\/)([0-9]+)(\/)([0-9]+), ([0-9]+):([0-9]+)[ ]?(AM|PM|am|pm)? -'
