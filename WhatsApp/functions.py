@@ -10,3 +10,5 @@ class ExtractDataFrame:
         self.data = []
 
     def load_file(self):
+        file = open(self.path, 'r', encoding='utf-8')
+        return file
