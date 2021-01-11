@@ -8,3 +8,5 @@ class ExtractDataFrame:
     def __init__(self, file_path):
         self.path = file_path
         self.data = []
+
+    def load_file(self):
