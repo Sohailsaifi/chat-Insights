@@ -20,3 +20,5 @@ class ExtractDataFrame:
             return True
         else:
             return False
+
+    def seperateData(self, line: str) -> tuple:
