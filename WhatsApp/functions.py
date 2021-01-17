@@ -22,3 +22,4 @@ class ExtractDataFrame:
             return False
 
     def seperateData(self, line: str) -> tuple:
+        entry_data = line.split(' - ')
