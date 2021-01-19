@@ -24,3 +24,4 @@ class ExtractDataFrame:
     def seperateData(self, line: str) -> tuple:
         entry_data = line.split(' - ')
         date, time = entry_data[0].split(', ')
+        authMsg = entry_data[1].split(':')
