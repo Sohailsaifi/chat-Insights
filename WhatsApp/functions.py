@@ -25,3 +25,6 @@ class ExtractDataFrame:
         entry_data = line.split(' - ')
         date, time = entry_data[0].split(', ')
         authMsg = entry_data[1].split(':')
+        if len(authMsg) > 1:
+            author = authMsg[0]
+            message = ' '.join(authMsg[1:])
