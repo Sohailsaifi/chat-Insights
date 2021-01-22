@@ -29,3 +29,5 @@ class ExtractDataFrame:
             author = authMsg[0]
             message = ' '.join(authMsg[1:])
             return (date, time, author, message)
+        else:
+            return None
