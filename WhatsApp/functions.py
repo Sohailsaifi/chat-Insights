@@ -28,3 +28,4 @@ class ExtractDataFrame:
         if len(authMsg) > 1:
             author = authMsg[0]
             message = ' '.join(authMsg[1:])
+            return (date, time, author, message)
