@@ -33,3 +33,5 @@ class ExtractDataFrame:
             return None
 
     def process(self):
+        f = self.load_file()
+        f.readline()
