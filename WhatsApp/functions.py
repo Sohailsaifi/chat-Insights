@@ -31,3 +31,5 @@ class ExtractDataFrame:
             return (date, time, author, message)
         else:
             return None
+
+    def process(self):
