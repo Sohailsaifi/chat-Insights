@@ -35,3 +35,7 @@ class ExtractDataFrame:
     def process(self):
         f = self.load_file()
         f.readline()
+        full_message = []
+        date = ''
+        time = ''
+        author = ''
