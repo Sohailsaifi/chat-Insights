@@ -43,3 +43,8 @@ class ExtractDataFrame:
             line = f.readline()
             if not line:
                 break
+            
+            if self.is_newEntry(line):
+                
+                if len(full_message)>0:
+                    temp = ' '.join(full_message)
