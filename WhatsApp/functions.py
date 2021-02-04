@@ -48,3 +48,5 @@ class ExtractDataFrame:
                 
                 if len(full_message)>0:
                     temp = ' '.join(full_message)
+                    modified_replaced = temp.replace('\n', ' ')
+                    self.data.append([date, time, author, modified_replaced])
