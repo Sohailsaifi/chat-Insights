@@ -58,3 +58,5 @@ class ExtractDataFrame:
                     full_message.append(message)
                 else:
                     full_message.append(line)
+
+        f.close()
