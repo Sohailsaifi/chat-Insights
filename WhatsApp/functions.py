@@ -66,3 +66,6 @@ class ExtractDataFrame:
         for char in msg:
             if char in emoji.UNICODE_EMOJI:
                 final_list.append(char)
+                
+        if len(final_list)==0:
+            return 0
