@@ -62,3 +62,7 @@ class ExtractDataFrame:
         f.close()
 
     def emojis(self, msg: str) -> list:
+        final_list = []
+        for char in msg:
+            if char in emoji.UNICODE_EMOJI:
+                final_list.append(char)
