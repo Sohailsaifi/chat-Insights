@@ -56,3 +56,5 @@ class ExtractDataFrame:
                 if received is not None:
                     date, time, author, message = received
                     full_message.append(message)
+                else:
+                    full_message.append(line)
