@@ -60,3 +60,5 @@ class ExtractDataFrame:
                     full_message.append(line)
 
         f.close()
+
+    def emojis(self, msg: str) -> list:
