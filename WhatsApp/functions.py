@@ -55,3 +55,4 @@ class ExtractDataFrame:
                 received = self.seperateData(line)
                 if received is not None:
                     date, time, author, message = received
+                    full_message.append(message)
