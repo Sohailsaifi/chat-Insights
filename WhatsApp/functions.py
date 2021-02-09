@@ -50,3 +50,5 @@ class ExtractDataFrame:
                     temp = ' '.join(full_message)
                     modified_replaced = temp.replace('\n', ' ')
                     self.data.append([date, time, author, modified_replaced])
+                
+                full_message.clear()
