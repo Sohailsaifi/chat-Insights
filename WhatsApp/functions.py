@@ -71,3 +71,5 @@ class ExtractDataFrame:
             return 0
         else:
             return final_list
+
+    def dataframe(self) -> object:
