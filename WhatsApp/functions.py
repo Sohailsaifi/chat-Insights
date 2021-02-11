@@ -69,3 +69,5 @@ class ExtractDataFrame:
                 
         if len(final_list)==0:
             return 0
+        else:
+            return final_list
