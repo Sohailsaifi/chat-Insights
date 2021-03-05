@@ -73,3 +73,4 @@ class ExtractDataFrame:
             return final_list
 
     def dataframe(self) -> object:
+        df = pd.DataFrame(self.data, columns=['Date', 'Time', 'Author', 'Message'])
