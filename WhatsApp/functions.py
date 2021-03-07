@@ -78,3 +78,7 @@ class ExtractDataFrame:
         df['Emojis'] = df.Message.apply(self.emojis)
         df['Emoji_num'] = df.Emojis.str.len()
         return df
+
+
+
+class GenerateStats:
