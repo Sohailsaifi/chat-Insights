@@ -82,3 +82,12 @@ class ExtractDataFrame:
 
 
 class GenerateStats:
+
+    def __init__(self):
+        
+        self.holidays_dict = {datetime.date(2020, 1, 14): 'Makar Sankranti / Pongal',
+                              datetime.date(2020, 1, 26): 'Republic Day',
+                              datetime.date(2020, 8, 15): 'Independence Day',
+                              datetime.date(2020, 10, 2): 'Gandhi Jayanti',
+                              datetime.date(2020, 12, 25): 'Christmas',
+                             }
