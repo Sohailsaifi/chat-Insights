@@ -76,3 +76,5 @@ class ExtractDataFrame:
         df = pd.DataFrame(self.data, columns=['Date', 'Time', 'Author', 'Message'])
         df['Date'] = pd.to_datetime(df.Date)
         df['Emojis'] = df.Message.apply(self.emojis)
+        df['Emoji_num'] = df.Emojis.str.len()
+        return df
