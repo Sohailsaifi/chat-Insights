@@ -74,3 +74,5 @@ class ExtractDataFrame:
 
     def dataframe(self) -> object:
         df = pd.DataFrame(self.data, columns=['Date', 'Time', 'Author', 'Message'])
+        df['Date'] = pd.to_datetime(df.Date)
+        df['Emojis'] = df.Message.apply(self.emojis)
