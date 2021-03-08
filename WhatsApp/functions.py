@@ -91,3 +91,6 @@ class GenerateStats:
                               datetime.date(2020, 10, 2): 'Gandhi Jayanti',
                               datetime.date(2020, 12, 25): 'Christmas',
                              }
+
+    def mediaRatio(self, df) -> int:
+        return ((df[df['Message'] == ' <Media omitted> '].Message.count()) / (df.Message.count()))*100
