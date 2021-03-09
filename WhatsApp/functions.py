@@ -94,3 +94,6 @@ class GenerateStats:
 
     def mediaRatio(self, df) -> int:
         return ((df[df['Message'] == ' <Media omitted> '].Message.count()) / (df.Message.count()))*100
+
+    def totalEmojis(self, df) -> int:
+        return len([i for j in df.Emojis[df.Emojis!=0] for i in j])
