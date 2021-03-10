@@ -102,4 +102,5 @@ class GenerateStats:
         return len(set([i for j in df.Emojis[df.Emojis!=0] for i in j]))
 
     def frequentEmojis(self, df) -> object:
-        
+        emojiList = [i for j in df.Emojis[df.Emojis!=0] for i in j]
+        emoji_dict = dict(Counter(emojiList))
