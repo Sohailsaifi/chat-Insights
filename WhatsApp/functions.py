@@ -100,3 +100,6 @@ class GenerateStats:
 
     def uniqueEmojis(self, df) -> int:
         return len(set([i for j in df.Emojis[df.Emojis!=0] for i in j]))
+
+    def frequentEmojis(self, df) -> object:
+        
