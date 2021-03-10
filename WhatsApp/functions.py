@@ -97,3 +97,6 @@ class GenerateStats:
 
     def totalEmojis(self, df) -> int:
         return len([i for j in df.Emojis[df.Emojis!=0] for i in j])
+
+    def uniqueEmojis(self, df) -> int:
+        return len(set([i for j in df.Emojis[df.Emojis!=0] for i in j]))
