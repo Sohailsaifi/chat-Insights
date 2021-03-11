@@ -106,3 +106,7 @@ class GenerateStats:
         emoji_dict = dict(Counter(emojiList))
         emoji_dict = sorted(emoji_dict.items(), key=lambda x: x[1], reverse=True)
         emoji_df = pd.DataFrame(emoji_dict, columns=['Emoji', 'Count'])
+        if emoji_df.shape[0] <10:
+            return emoji_df
+        else:
+            return emoji_df[:10]
