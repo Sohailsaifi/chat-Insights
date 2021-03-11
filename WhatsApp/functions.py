@@ -104,3 +104,4 @@ class GenerateStats:
     def frequentEmojis(self, df) -> object:
         emojiList = [i for j in df.Emojis[df.Emojis!=0] for i in j]
         emoji_dict = dict(Counter(emojiList))
+        emoji_dict = sorted(emoji_dict.items(), key=lambda x: x[1], reverse=True)
