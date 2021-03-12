@@ -110,3 +110,5 @@ class GenerateStats:
             return emoji_df
         else:
             return emoji_df[:10]
+
+    def activeMembers(self, df) -> object:
