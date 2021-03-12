@@ -115,3 +115,7 @@ class GenerateStats:
         authors = pd.DataFrame(df.Author.value_counts())
         authors = authors.rename(columns={'Author': 'Message Count'})
         authors.index.name = 'Author'
+        if authors.shape[0] < 8:
+            return authors
+        else:
+            return authors[:8]
