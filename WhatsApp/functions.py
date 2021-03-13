@@ -119,3 +119,5 @@ class GenerateStats:
             return authors
         else:
             return authors[:8]
+
+    def lazyMembers(self, df) -> object:
