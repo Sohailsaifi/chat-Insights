@@ -128,3 +128,5 @@ class GenerateStats:
             return authors[::-1]
         else:
             return authors[-5:][::-1]
+
+    def activityOverDates(self, df) -> object:
