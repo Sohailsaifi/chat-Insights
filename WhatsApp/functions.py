@@ -121,3 +121,6 @@ class GenerateStats:
             return authors[:8]
 
     def lazyMembers(self, df) -> object:
+        authors = pd.DataFrame(df.Author.value_counts())
+        authors = authors.rename(columns={'Author': 'Message Count'})
+        authors.index.name = 'Author'
