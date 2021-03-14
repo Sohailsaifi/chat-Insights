@@ -130,3 +130,5 @@ class GenerateStats:
             return authors[-5:][::-1]
 
     def activityOverDates(self, df) -> object:
+        result = df.groupby('Date').sum()
+        result = result.rename(columns={'Emoji_num': 'Number of Messages'})
