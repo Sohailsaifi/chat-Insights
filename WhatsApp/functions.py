@@ -133,3 +133,5 @@ class GenerateStats:
         result = df.groupby('Date').sum()
         result = result.rename(columns={'Emoji_num': 'Number of Messages'})
         return result
+
+    def activityOverTime(self, df) -> object:
