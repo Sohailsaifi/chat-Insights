@@ -138,3 +138,5 @@ class GenerateStats:
         result = df.groupby('Time').sum()
         result = result.rename(columns={'Emoji_num': 'Number of Messages'})
         return result
+
+    def holidaysDataFrame(self, df) -> dict:
