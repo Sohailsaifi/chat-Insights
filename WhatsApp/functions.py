@@ -140,3 +140,6 @@ class GenerateStats:
         return result
 
     def holidaysDataFrame(self, df) -> dict:
+        df_dict = {}
+        for date, event in self.holidays_dict.items():
+            temp = df[(df.Date.dt.day==date.day) & (df.Date.dt.month==date.month)]
