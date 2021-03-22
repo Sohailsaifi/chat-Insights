@@ -152,3 +152,6 @@ class GenerateStats:
         temp = pd.to_datetime(df.Time)
         morning_mask = (temp.dt.hour >= 6) & (temp.dt.hour <=9)
         night_mask = ~((temp.dt.hour >= 3) & (temp.dt.hour <=23))
+        df_dict_n['morning'] = pd.DataFrame(df[morning_mask].Author.value_counts())
+        df_dict_n['night'] = pd.DataFrame(df[night_mask].Author.value_counts())
+        df_dict_n['morning'] = df_dict_n['morning'].rename(columns={'Author':'Message Count'})
