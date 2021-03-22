@@ -143,3 +143,7 @@ class GenerateStats:
         df_dict = {}
         for date, event in self.holidays_dict.items():
             temp = df[(df.Date.dt.day==date.day) & (df.Date.dt.month==date.month)]
+            df_dict[event] = temp
+
+        return df_dict
+        
