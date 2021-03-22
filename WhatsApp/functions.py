@@ -150,3 +150,5 @@ class GenerateStats:
     def nightOwls_earlyBirds(self, df) -> dict:
         df_dict_n = {}
         temp = pd.to_datetime(df.Time)
+        morning_mask = (temp.dt.hour >= 6) & (temp.dt.hour <=9)
+        night_mask = ~((temp.dt.hour >= 3) & (temp.dt.hour <=23))
