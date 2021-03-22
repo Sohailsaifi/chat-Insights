@@ -148,3 +148,5 @@ class GenerateStats:
         return df_dict
 
     def nightOwls_earlyBirds(self, df) -> dict:
+        df_dict_n = {}
+        temp = pd.to_datetime(df.Time)
