@@ -146,4 +146,5 @@ class GenerateStats:
             df_dict[event] = temp
 
         return df_dict
-        
+
+    def nightOwls_earlyBirds(self, df) -> dict:
