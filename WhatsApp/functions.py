@@ -155,3 +155,6 @@ class GenerateStats:
         df_dict_n['morning'] = pd.DataFrame(df[morning_mask].Author.value_counts())
         df_dict_n['night'] = pd.DataFrame(df[night_mask].Author.value_counts())
         df_dict_n['morning'] = df_dict_n['morning'].rename(columns={'Author':'Message Count'})
+        df_dict_n['night'] = df_dict_n['night'].rename(columns={'Author':'Message Count'})
+        df_dict_n['night'].index.name = df_dict_n['morning'].index.name = 'Author'
+        
