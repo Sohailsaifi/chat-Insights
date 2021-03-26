@@ -157,4 +157,7 @@ class GenerateStats:
         df_dict_n['morning'] = df_dict_n['morning'].rename(columns={'Author':'Message Count'})
         df_dict_n['night'] = df_dict_n['night'].rename(columns={'Author':'Message Count'})
         df_dict_n['night'].index.name = df_dict_n['morning'].index.name = 'Author'
+
+        if df_dict_n['morning'].shape[0] > 5:
+            df_dict_n['morning'] = df_dict_n['morning'][:5]
         
