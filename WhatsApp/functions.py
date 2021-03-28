@@ -160,4 +160,7 @@ class GenerateStats:
 
         if df_dict_n['morning'].shape[0] > 5:
             df_dict_n['morning'] = df_dict_n['morning'][:5]
+
+        if df_dict_n['night'].shape[0] >5:
+            df_dict_n['night'] = df_dict_n['night'][:5]
         
