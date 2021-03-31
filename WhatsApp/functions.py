@@ -163,4 +163,6 @@ class GenerateStats:
 
         if df_dict_n['night'].shape[0] >5:
             df_dict_n['night'] = df_dict_n['night'][:5]
+
+        return df_dict_n
         
