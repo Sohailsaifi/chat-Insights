@@ -166,3 +166,4 @@ class GenerateStats:
 
         return df_dict_n
         
+    def emojiCon_Emojiless(self, df) -> dict:
