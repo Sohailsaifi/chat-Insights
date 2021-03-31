@@ -168,3 +168,5 @@ class GenerateStats:
         
     def emojiCon_Emojiless(self, df) -> dict:
         df_dict_n2 = {}
+        temp2 = pd.DataFrame(df.groupby('Author').Emoji_num.sum().sort_values(ascending=False))
+        temp2 = temp2.rename(columns={'Emoji_num': 'Number of Emojis'})
