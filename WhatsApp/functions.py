@@ -170,3 +170,6 @@ class GenerateStats:
         df_dict_n2 = {}
         temp2 = pd.DataFrame(df.groupby('Author').Emoji_num.sum().sort_values(ascending=False))
         temp2 = temp2.rename(columns={'Emoji_num': 'Number of Emojis'})
+        if temp2.shape[0] > 6:
+            df_dict_n2['Emoji_con'] = temp2[:6]
+            df_dict_n2['Emoji_less'] = temp2[-6:][::-1]
