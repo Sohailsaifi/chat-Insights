@@ -173,3 +173,7 @@ class GenerateStats:
         if temp2.shape[0] > 6:
             df_dict_n2['Emoji_con'] = temp2[:6]
             df_dict_n2['Emoji_less'] = temp2[-6:][::-1]
+            else:
+            df_dict_n2['Emoji_con'] = df_dict_n2['Emoji_less'] = temp2
+            
+        return df_dict_n2
