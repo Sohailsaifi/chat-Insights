@@ -3,6 +3,7 @@ import plotly.graph_objs as go
 import plotly.express as px
 import json
 
+
 def activityDate_Graph(df):
     fig_batch = {
                     'data': [
@@ -31,6 +32,8 @@ def activityTime_Graph(df):
                         go.Scatter(
                             x=df.index,
                             y=df['Number of Messages'].values,
+                            # text=y,
+                            # textposition='auto',
                             mode='lines',
                         )],
 
@@ -42,7 +45,8 @@ def activityTime_Graph(df):
                     )}
     graphJSON = json.dumps(fig_batch, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
-    
+
+
 def Emojis_donut(df, title):
     labels = df.Emoji.values
     values = df.Count.values
@@ -54,6 +58,7 @@ def Emojis_donut(df, title):
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
 
+
 def membersBarPlot(df, title):
     fig = px.bar(df, x=df.index, y=df['Message Count'].values, 
                 labels={'y':'Number of Messages'}, text=df['Message Count'].values, title=title,
@@ -62,6 +67,7 @@ def membersBarPlot(df, title):
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
 
+
 def night_morningPlot(df, title):
     labels = df.index
     values = df['Message Count'].values
@@ -69,9 +75,11 @@ def night_morningPlot(df, title):
                     go.Pie(labels=labels, values=values, textinfo='label+percent',
                              insidetextorientation='radial')
                     ])
+    
     fig.update_layout(title=title)
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
+
 
 def emojiAdicts_LessPlot(df, title):
     fig = px.bar(df, x=df.index, y=df['Number of Emojis'].values, 
