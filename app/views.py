@@ -31,6 +31,7 @@ def upload_file():
 
     return redirect(f'/process/{uploaded_file.filename}')
 
+
 @app.route('/process/<file_name>')
 def processing_phase(file_name):
     if file_name=='':
@@ -57,7 +58,7 @@ def processing_phase(file_name):
 
         lazy_members = stats.lazyMembers(df)
         lazyMemberPlot = membersBarPlot(lazy_members, 'Lazy Members of The Group')  # Lazy Members Bar Chart
-
+        
         result_dates = stats.activityOverDates(df)
         datesActivityGraph = activityDate_Graph(result_dates)  # Overall Dates Activity Line Plot
 
@@ -76,25 +77,24 @@ def processing_phase(file_name):
 
         holidays = stats.holidays_dict
         returned = stats.holidaysDataFrame(df)
-
         holiday_authors = {}
         holiday_freq_emojis = {}
-
         j = 1
         for i in holidays.values():
             if not returned[i].empty:
-                holiday_authors['eventGraphAuthor'+str(j)] = membersBarPlot(stats.activeMembers(returned[i]), i)  
-                holiday_freq_emojis['eventGraphEmoji'+str(j)] = Emojis_donut(stats.frequentEmojis(returned[i]),i)
+                holiday_authors['eventGraphAuthor'+str(j)] = membersBarPlot(stats.activeMembers(returned[i]), i)  # Holidays Author Bar Plot 
+                holiday_freq_emojis['eventGraphEmoji'+str(j)] = Emojis_donut(stats.frequentEmojis(returned[i]),i)  # Holidays Emojis Donut Plot
                 j += 1
         
     except:
         abort(404)
+    
 
-return render_template('analysis.html', total_emojis=total_emojis, total=df.shape[0],
-                        media_ratio=media_ratio, unique_emojis=unique_emojis,
-                        activeMemberPlot=activeMemberPlot, lazyMemberPlot=lazyMemberPlot,
-                        bar_plot_dates=datesActivityGraph, bar_plot_time=timeActivityGraph,
-                        morning_plot=morning_plot, night_plot=night_plot,
-                        emojiAdictsPlot=emojiAdictsPlot, holiday_authors=holiday_authors, 
-                        holiday_freq_emojis=holiday_freq_emojis, emoji_donut=emoji_donut
-                        )
+    return render_template('analysis.html', total_emojis=total_emojis, total=df.shape[0],
+                            media_ratio=media_ratio, unique_emojis=unique_emojis,
+                            activeMemberPlot=activeMemberPlot, lazyMemberPlot=lazyMemberPlot,
+                            bar_plot_dates=datesActivityGraph, bar_plot_time=timeActivityGraph,
+                            morning_plot=morning_plot, night_plot=night_plot,
+                            emojiAdictsPlot=emojiAdictsPlot, holiday_authors=holiday_authors, 
+                            holiday_freq_emojis=holiday_freq_emojis, emoji_donut=emoji_donut
+                            )
